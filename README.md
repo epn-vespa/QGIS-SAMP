@@ -3,6 +3,7 @@
  connect QGIS to VO HUB
 
 QGIS does not currently connect to VO, or to GAVO. 
+
 The most efficent course of action is to connect QGIS to GAVO via HUB TOPCAT
 
 To do so there needs to be some interface that would allow QGIS to listen to HUB XML-RPC.

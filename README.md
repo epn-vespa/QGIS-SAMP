@@ -1,6 +1,6 @@
 # VO HUB interface for QGIS
-# QGIS-VO_plugin
-# connect QGIS to VO HUB
+ QGIS-VO_plugin
+ connect QGIS to VO HUB
 
 QGIS does not currently connect to VO, or to GAVO. 
 The most efficent course of action is to connect QGIS to GAVO via HUB TOPCAT

@@ -106,15 +106,14 @@ print tql(f_encode( f_toEncode(OLINDEX3raw,OLINDEX3nn) , 'float', '"tif"'))
 
 print tql(f_encode( f_toEncodeIndex([(1690,0.20),(1750,0.20),(1810,0.30),(1870,0.30)],1560,2450) , 'int', '"jpg"'))
 args = [[(1690,0.20),(1750,0.20),(1810,0.30),(1870,0.30)],1560,2450]
-print tql(f_encode( f_times(f_indexRAW(*args),f_indexNN([x[0] for x in args[0]] + [args[1],args[2]])) , 'float', '"tif"'))
+print tql(f_encode( f_times(f_indexRAW(*args),f_indexNN(*args)) , 'float', '"tif"'))
 
 #Product #16: HCPINCEX2: Detect broad absorption centred at 2.12 um
 #Pyroxene is strongly +; favors HCP
 #Caveats: LCP
 args = [[(2120,0.10),(2140,0.10),(2230,0.15),(2250,0.30),(2430,0.20),(2460,0.15)],1690,2530]
 print tql(f_encode( f_toEncodeIndex(*args) , 'int', '"jpg"'))
-#print tql(f_encode( f_times(f_indexRAW(*args),f_indexNN(*args)) , 'float', '"tif"'))
-print tql(f_encode( f_times(f_indexRAW(*args),f_indexNN([x[0] for x in args[0]] + [args[1],args[2]])) , 'float', '"tif"'))
+print tql(f_encode( f_times(f_indexRAW(*args),f_indexNN(*args)) , 'float', '"tif"'))
 
 #Product #17: 1.0-2.3 um spectral variance
 #Requires computing a line of best fit - nearly impossible to do 

@@ -239,7 +239,7 @@ print tql(f_encode( f_toEncode(f_minus('1',f_over(f_sumRRCx([2290,2320,2330],181
 #Product #39: BD2355: 2355, 2300 2450
 #Chlorite, Prehnite, Pumpellyite
 #Caveats: Carbonate, Serpentine
-print tql(f_encode( f_toEncodeBD3L(2355, 2300 2450) , 'unsigned char', '"jpg"'))
+print tql(f_encode( f_toEncodeBD3L(2355, 2300, 2450) , 'unsigned char', '"jpg"'))
 
 #Product #40: SINDEX2: SH(2290,2120,2400)
 #Hydrated sulfates (mono and polyhydrated sulfates) will be strongly > 0

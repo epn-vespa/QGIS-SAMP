@@ -7,8 +7,8 @@ Only records will be sent, geometry will be discarded.
 '''
 import shapefile
 sf = shapefile.Reader("shp")
-shapes = sf.shapes()
-fields = sf.fields()
+#shapes = sf.shapes()
+fields = sf.fields
 records = sf.records()
 import numpy as np
 from astropy.table import Table

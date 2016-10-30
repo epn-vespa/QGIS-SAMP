@@ -1,3 +1,6 @@
+'''
+This script will send a command to Aladin via SAMP HUB, e.g. to draw a polygon.
+'''
 from astropy.vo.samp import SAMPIntegratedClient
 client = SAMPIntegratedClient()
 

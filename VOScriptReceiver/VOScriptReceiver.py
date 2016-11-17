@@ -152,12 +152,14 @@ class VOScriptReceiver:
     def convertVOTtoGEOJSON(self, vot, destination):
         self.dlg.label.setText('defining getParts')
         def getParts(sRegion):
-            lon=sRegion.split(' ')[2:][0::2]
+#            lon=sRegion.split(' ')[2:][0::2]
+            lon=sRegion.split(' ')[2:][0::2] + sRegion.split(' ')[2:3]
             llon=np.asarray([float(i) for i in lon])
             spread=llon.max()-llon.min() ###
             if spread > 180:
                 lon = [[x, x-360][x>180] for x in llon]
-            lat=sRegion.split(' ')[2:][1::2]
+#            lat=sRegion.split(' ')[2:][1::2]
+            lat=sRegion.split(' ')[2:][1::2] + sRegion.split(' ')[3:4]
             return [[[360-float(lon[i]),float(lat[i])] for i in range(len(lat))]]
         self.dlg.label.setText('making feature')
         makeFeature=lambda coords, props: {"type":"Feature","geometry": { "type": "Polygon", "coordinates": coords},"properties": props}
